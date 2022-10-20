@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bubblesdiving';
+  
+
+  constructor(private router: Router,private _activatedRoute:ActivatedRoute) {
+  }
+
+  
+  btnClick(): void {
+    this.router.navigateByUrl('main');
+  };
+
+
 }
